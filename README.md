@@ -1,4 +1,4 @@
-# LTI Memberships services
+# LTI Memberships services for Moodle
 
 This repository contains an implementation of the following 1EdTech Learning Tools Interoperability (LTI) services:
 * [Memberships](https://www.imsglobal.org/specs/ltimemv1p0)
