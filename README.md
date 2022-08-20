@@ -1,11 +1,13 @@
 # LTI Memberships services for Moodle
 
 This repository contains an implementation of the following 1EdTech Learning Tools Interoperability (LTI) services:
+
 * [Membership](https://www.imsglobal.org/specs/ltimemv1p0)
 * [Names and Role Provisioning (NRPS)](https://www.imsglobal.org/spec/lti-nrps/v2p0)
 * [Course Groups](https://www.imsglobal.org/spec/lti-gs/v1p0)
 
 It enhances the existing Memberships service available in Moodle core as follows:
+
 * includes the username property in the NRPS response
 * includes the Course Groups service (Candidate Final, issued 1 October 2019)
 
