@@ -1,7 +1,7 @@
 # LTI Memberships services for Moodle
 
 This repository contains an implementation of the following 1EdTech Learning Tools Interoperability (LTI) services:
-* [Memberships](https://www.imsglobal.org/specs/ltimemv1p0)
+* [Membership](https://www.imsglobal.org/specs/ltimemv1p0)
 * [Names and Role Provisioning (NRPS)](https://www.imsglobal.org/spec/lti-nrps/v2p0)
 * [Course Groups](https://www.imsglobal.org/spec/lti-gs/v1p0)
 
@@ -30,13 +30,20 @@ The service can also be installed manually by downloading the source code from t
 
 This implementation extends the Moodle implementation of the official LTI services in the following ways.
 
+### Membership service
+
+* The roles array for each member will include the fully-qualified name of any roles specified using their short name (in addition tp the short name)
+* A Moodle-specific role is added for each Moodle role associated with the member; e.g. https://moodle.org/lti/user/role/editingteacher or https://moodle.org/lti/user/role/student
+
 ### Names and Role Provisioning services
 
-The response includes a member's username in a property named `ext_user_username` (to be consistent with the response from the *Memberships* service)
+* The response includes a member's username in a property named `ext_user_username` (to be consistent with the response from the *Membership* service)
+* The roles array for each member will include the fully-qualified name of any roles specified using their short name (in addition tp the short name)
+* A Moodle-specific role is added for each Moodle role associated with the member; e.g. https://moodle.org/lti/user/role/editingteacher or https://moodle.org/lti/user/role/student
 
 ### Context Groups service
 
-A `set_ids` property is included in the response to provide support for groups which belong to more than one set (grouping).  The property is an array of strings with an entry for each set to which the group belongs.  The value of each entry is the ID of the set.  The `set_id` property is also included in the response for those groups which belong to a single set, but is omitted when a group does not belong to a set or belongs to more than one set.
+* A `set_ids` property is included in the response to provide support for groups which belong to more than one set (grouping).  The property is an array of strings with an entry for each set to which the group belongs.  The value of each entry is the ID of the set.  The `set_id` property is also included in the response for those groups which belong to a single set, but is omitted when a group does not belong to a set or belongs to more than one set.
 
 ## Feedback/issues
 
