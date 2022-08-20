@@ -9,6 +9,8 @@ This repository contains an implementation of the following 1EdTech Learning Too
 It enhances the existing Memberships service available in Moodle core as follows:
 
 * includes the username property in the NRPS response
+* adds the fully-qualified role for any role specified using its short form
+* adds Moodle-specific roles
 * includes the Course Groups service (Candidate Final, issued 1 October 2019)
 
 Moodle versions 3.9 or later are supported so there is no need to upgrade to the latest release of Moodle to take advantage of newly supported services.
