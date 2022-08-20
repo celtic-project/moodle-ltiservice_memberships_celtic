@@ -32,13 +32,13 @@ This implementation extends the Moodle implementation of the official LTI servic
 
 ### Membership service
 
-* The roles array for each member will include the fully-qualified name of any roles specified using their short name (in addition tp the short name)
+* The roles array for each member will include the fully-qualified name of any roles specified using their short name (in addition to the short name)
 * A Moodle-specific role is added for each Moodle role associated with the member; e.g. https://moodle.org/lti/user/role/editingteacher or https://moodle.org/lti/user/role/student
 
 ### Names and Role Provisioning services
 
 * The response includes a member's username in a property named `ext_user_username` (to be consistent with the response from the *Membership* service)
-* The roles array for each member will include the fully-qualified name of any roles specified using their short name (in addition tp the short name)
+* The roles array for each member will include the fully-qualified name of any roles specified using their short name (in addition to the short name)
 * A Moodle-specific role is added for each Moodle role associated with the member; e.g. https://moodle.org/lti/user/role/editingteacher or https://moodle.org/lti/user/role/student
 
 ### Context Groups service
